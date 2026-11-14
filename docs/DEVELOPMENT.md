@@ -261,7 +261,7 @@ Settings.
 Requirements: Windows 10/11 x64 and Node.js 22+ (developed on Node 24). PowerShell is used for the engine script.
 
 ```bat
-cd kingside
+cd Kingside
 npm install
 npx install-electron        REM only if npm skipped Electron's binary download
 npm run engine              REM stage Stockfish for bundling (winget install, or add -Download)

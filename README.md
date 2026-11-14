@@ -237,7 +237,13 @@ Stockfish availability depends on the application's distribution configuration. 
 
 ## 🛠️ Building From Source
 
-To build Kingside yourself:
+To build Kingside yourself, you need:
+
+- Windows 10 or 11 (64-bit)
+- [Node.js](https://nodejs.org/) 22 or newer (includes npm)
+- [Git](https://git-scm.com/)
+
+Run the commands below in PowerShell or Command Prompt.
 
 **1. Clone the repository**
 
@@ -253,21 +259,60 @@ cd Kingside
 
 **3. Install project dependencies**
 
-Follow the dependency installation instructions for the project.
+```bash
+npm ci
+```
 
-**4. Configure Stockfish**
+Then download Electron's runtime, which npm doesn't fetch automatically:
 
-Make sure the Stockfish engine dependency is available and configured correctly.
+```bash
+npx install-electron --no
+```
+
+**4. Add Stockfish**
+
+The Stockfish engine isn't stored in this repository. Install it with winget, then copy it into the project:
+
+```bash
+winget install Stockfish.Stockfish
+```
+
+```bash
+npm run engine
+```
+
+This puts the engine, its GPL license and its source code into `resources/engine/`. If you don't use winget, `npm run engine -- -Download` fetches the official release from GitHub instead.
 
 **5. Start the application**
 
-Use the development commands provided by the project.
+```bash
+npm run dev
+```
 
-**6. Build the Windows executable**
+This opens Kingside with hot reload, so code changes show up immediately.
 
-Follow the project's Windows packaging instructions to generate the application executable.
+**6. Run the tests (optional)**
 
-Refer to the project configuration and build scripts for the exact commands and requirements.
+```bash
+npm test
+```
+
+Use `npm run typecheck` to check the TypeScript as well.
+
+**7. Build the Windows executable**
+
+```bash
+npm run dist
+```
+
+This creates two files in the `release` folder:
+
+- `Kingside-Setup-1.0.0.exe`, the installer.
+- `Kingside-Portable-1.0.0.exe`, a single exe that runs without installing.
+
+For a quicker test build, `npm run dist:dir` creates `release\win-unpacked\Kingside.exe` without packaging.
+
+More detail on the architecture, tests and engine handling is in [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).
 
 ---
 
