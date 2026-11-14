@@ -1,17 +1,32 @@
 
-# ♟️ Chess Training & Analysis
+# ♟️ Kingside
 
-**An all-in-one desktop chess platform built for playing, learning, analyzing, and improving.**
+<p align="center">
+  <strong>Your all-in-one chess training and analysis platform.</strong>
+  <br />
+  Play, learn, analyze, and improve — all in one desktop application.
+</p>
 
-A modern Windows chess application that combines Stockfish-powered gameplay, interactive chess lessons, tactical puzzles, Elo-based AI coaches, and advanced game analysis into one experience.
-
-Whether you're learning the basics or trying to improve at an advanced level, this application gives you the tools to understand your games, identify weaknesses, and become a stronger chess player.
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Windows-0078D4?style=for-the-badge&logo=windows&logoColor=white" alt="Windows" />
+  <img src="https://img.shields.io/badge/Chess%20Engine-Stockfish-222222?style=for-the-badge" alt="Stockfish" />
+  <img src="https://img.shields.io/badge/Game%20Format-PGN%20%7C%20FEN-6C5CE7?style=for-the-badge" alt="PGN and FEN" />
+</p>
 
 ---
+
+## ♟️ About Kingside
+
+**Kingside** is a modern desktop chess application designed to bring everything a chess player needs into one place.
+
+Whether you're learning the fundamentals, practicing tactics, playing against an engine, or reviewing competitive games, Kingside provides tools to help you understand chess and improve your decision-making.
+
+Instead of switching between multiple websites and applications, Kingside combines chess gameplay, interactive lessons, puzzles, AI coaching, and detailed Stockfish analysis into one experience.
 
 ## ✨ Features
 
 ### ♟️ Play Against Stockfish
+
 Play complete chess games against Stockfish with adjustable difficulty levels.
 
 - Multiple difficulty settings based on approximate Elo ratings.
@@ -19,7 +34,8 @@ Play complete chess games against Stockfish with adjustable difficulty levels.
 - 10-minute clocks for both players.
 - Drag-and-drop and click-to-move controls.
 - Premove support.
-- Legal move indicators and last-move highlighting.
+- Legal move indicators.
+- Last-move highlighting.
 - Right-click square annotations and arrows.
 - Move history with historical position navigation.
 - Human-like engine response timing.
@@ -27,6 +43,7 @@ Play complete chess games against Stockfish with adjustable difficulty levels.
 Stockfish difficulty ratings are estimates and do not guarantee equivalence to an official chess rating.
 
 ### 📚 Interactive Chess Lessons
+
 Learn chess through structured, interactive lessons designed for different skill levels.
 
 **Beginner**
@@ -50,14 +67,16 @@ Learn chess through structured, interactive lessons designed for different skill
 - Prophylaxis.
 - Complex positional concepts.
 
-Lessons include interactive chessboards, move demonstrations, explanations, and knowledge checks.
+Lessons can include interactive chessboards, move demonstrations, explanations, and knowledge checks.
 
-Track your learning progress and revisit previously completed lessons.
+Track your learning progress and revisit completed lessons.
 
 ### 🧩 Chess Puzzles
+
 Improve your tactical awareness with an interactive puzzle system.
 
 Puzzle categories include:
+
 - Mate in 1, 2, and 3.
 - Winning material.
 - Tactical combinations.
@@ -67,7 +86,8 @@ Puzzle categories include:
 - Defensive tactics.
 - Endgame puzzles.
 
-Features include:
+Additional features:
+
 - Adjustable puzzle difficulty.
 - Puzzle rating system.
 - Interactive move validation.
@@ -77,9 +97,9 @@ Features include:
 - Solving-time statistics.
 - Progress tracking.
 
-### 🧠 Elo-Based AI Chess Coaches
+### 🧠 Six Elo-Based AI Chess Coaches
 
-Choose from six different coaching levels, each designed to explain chess concepts according to your playing strength.
+Choose from six coaching levels, each designed to explain chess concepts according to your playing strength.
 
 | Coach | Approximate Elo |
 |---|---:|
@@ -93,6 +113,7 @@ Choose from six different coaching levels, each designed to explain chess concep
 Each coach adapts its explanations, terminology, and level of detail.
 
 Coaching features include:
+
 - Position analysis.
 - Move explanations.
 - Candidate move suggestions.
@@ -108,7 +129,8 @@ The coaches use chess engine analysis to ground their recommendations in actual 
 
 Review completed games with detailed Stockfish analysis.
 
-Analysis includes:
+Move classifications can include:
+
 - Brilliant moves.
 - Great moves.
 - Best moves.
@@ -117,21 +139,22 @@ Analysis includes:
 - Mistakes.
 - Blunders.
 - Missed opportunities.
-- Evaluation changes.
-- Suggested engine continuations.
 
-Additional features:
+Additional analysis features:
+
 - Interactive evaluation graph.
 - Move-by-move analysis.
 - Engine principal variations.
 - Opening identification.
+- Evaluation changes.
+- Suggested engine continuations.
 - Navigable historical positions.
 
 Move classifications are based on the application's analysis criteria and should be treated as training indicators rather than universal judgments.
 
 ### 🌐 Chess.com & Lichess Game Imports
 
-Import your existing chess games and review them directly inside the application.
+Import existing chess games and review them directly inside Kingside.
 
 Supported import methods:
 
@@ -143,7 +166,7 @@ Supported import methods:
 
 Imported games can be stored in a personal game library.
 
-Review your games with Stockfish, inspect individual moves, and use AI coaches to identify areas for improvement.
+Review games with Stockfish, inspect individual moves, and use AI coaches to identify areas for improvement.
 
 ### 🎨 Chessboard Customization
 
@@ -168,6 +191,7 @@ Save your favorite combinations and use them throughout the application.
 Track your chess improvement through a unified training profile.
 
 Statistics can include:
+
 - Estimated playing Elo.
 - Puzzle rating.
 - Games played.
@@ -201,39 +225,47 @@ Playing strength, puzzle rating, and lesson progression are tracked separately.
 
 ### Windows
 
-1. Visit the repository's [Releases](../../releases) page.
+1. Visit the [Kingside Releases](https://github.com/freakygav/Kingside/releases) page.
 2. Download the latest available Windows release.
 3. Extract the application if distributed in an archive.
 4. Launch the executable.
-5. Configure the Stockfish engine if it is not already included.
+5. Configure Stockfish if it is not already included.
 
-**Note:** Stockfish availability depends on the application's distribution configuration. Follow the included engine setup instructions if a separate engine binary is required.
+Stockfish availability depends on the application's distribution configuration. Follow the included engine setup instructions if a separate engine binary is required.
 
 ---
 
 ## 🛠️ Building From Source
 
-To build the application yourself:
+To build Kingside yourself:
 
-1. Clone the repository:
+**1. Clone the repository**
 
-   ```bash
-   git clone https://github.com/freakygav/REPOSITORY.git
-   ```
+```bash
+git clone https://github.com/freakygav/Kingside.git
+```
 
-2. Navigate into the project directory:
+**2. Navigate into the project directory**
 
-   ```bash
-   cd REPOSITORY
-   ```
+```bash
+cd Kingside
+```
 
-3. Install the dependencies required by the project.
+**3. Install project dependencies**
 
-4. Configure the Stockfish engine dependency.
+Follow the dependency installation instructions for the project.
 
-5. Start the application using the development instructions provided in the project.
+**4. Configure Stockfish**
 
-6. Follow the project's Windows packaging instructions to generate the executable.
+Make sure the Stockfish engine dependency is available and configured correctly.
+
+**5. Start the application**
+
+Use the development commands provided by the project.
+
+**6. Build the Windows executable**
+
+Follow the project's Windows packaging instructions to generate the application executable.
 
 Refer to the project configuration and build scripts for the exact commands and requirements.
 
@@ -241,7 +273,7 @@ Refer to the project configuration and build scripts for the exact commands and 
 
 ## 📁 Data & Privacy
 
-The application is designed around locally stored game and training data.
+Kingside is designed around locally stored game and training data.
 
 Depending on the configured features, locally stored information may include:
 
@@ -262,19 +294,26 @@ Chess.com and Lichess account passwords are not required for importing public ga
 
 ## ⚙️ Chess Engine
 
-This application uses [Stockfish](https://stockfishchess.org/), a powerful open-source chess engine.
+Kingside uses [Stockfish](https://stockfishchess.org/), a powerful open-source chess engine.
 
-Stockfish provides the underlying chess analysis for gameplay, position evaluation, move recommendations, and game reviews.
+Stockfish provides the underlying chess analysis for:
+
+- Gameplay.
+- Position evaluation.
+- Move recommendations.
+- Game reviews.
+- Tactical analysis.
+- Engine variations.
 
 Stockfish is distributed under the GNU General Public License (GPL). Any bundled engine binaries and corresponding distribution materials must comply with its licensing requirements.
 
 ---
 
-## 📌 Project Goals
+## 🎯 Project Goals
 
-The goal of this project is to bring the most useful chess training and analysis tools together in one desktop application.
+The goal of Kingside is to bring the most useful chess training and analysis tools together in one desktop application.
 
-Instead of switching between multiple websites and applications, users can:
+Instead of switching between multiple websites and applications, players can:
 
 1. Play against a configurable chess engine.
 2. Learn through interactive lessons.
@@ -282,7 +321,8 @@ Instead of switching between multiple websites and applications, users can:
 4. Receive personalized coaching.
 5. Import games from external chess platforms.
 6. Analyze every move.
-7. Track their long-term improvement.
+7. Customize their playing environment.
+8. Track their long-term improvement.
 
 Everything is designed to work together as one cohesive chess experience.
 
@@ -295,6 +335,7 @@ Suggestions, bug reports, and improvements are welcome.
 If you encounter an issue or have an idea for a new feature, feel free to open an issue in the repository.
 
 When reporting bugs, include:
+
 - A description of the problem.
 - Steps to reproduce it.
 - Expected behavior.
@@ -313,4 +354,10 @@ Stockfish is a separate open-source project distributed under the GPL.
 
 ---
 
-**Built for chess players who want to play better, understand more, and keep improving.** ♟️
+<p align="center">
+  <strong>♟️ Kingside</strong>
+  <br />
+  Built for chess players who want to play better, understand more, and keep improving.
+  <br /><br />
+  <a href="https://github.com/freakygav/Kingside">GitHub Repository</a>
+</p>
