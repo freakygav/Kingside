@@ -1,0 +1,56 @@
+appId: app.kingside.chess
+productName: Kingside
+copyright: Copyright © 2026 Kingside contributors
+artifactName: ${productName}-${version}-${arch}.${ext}
+
+directories:
+  output: release
+  buildResources: build
+
+files:
+  - out/**/*
+  - package.json
+  - '!**/*.map'
+  # Development-only end-to-end self test (never runs in packaged builds).
+  - '!out/main/chunks/selftest-*'
+
+extraResources:
+  # Stockfish (GPL-3.0) + its license, source zip and SOURCE.txt; filled by `npm run engine`.
+  - from: resources/engine
+    to: engine
+    filter: ['**/*', '!README.txt']
+  - from: resources/icon.png
+    to: icon.png
+  - from: LICENSE.txt
+    to: LICENSE.txt
+  - from: THIRD_PARTY_NOTICES.md
+    to: THIRD_PARTY_NOTICES.md
+
+asar: true
+compression: normal
+
+win:
+  executableName: Kingside
+  icon: build/icon.ico
+  target:
+    - target: nsis
+      arch: [x64]
+    - target: portable
+      arch: [x64]
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Kingside
+  uninstallDisplayName: Kingside
+  installerIcon: build/icon.ico
+  uninstallerIcon: build/icon.ico
+  artifactName: Kingside-Setup-${version}.${ext}
+  deleteAppDataOnUninstall: false
+  license: LICENSE.txt
+
+portable:
+  artifactName: Kingside-Portable-${version}.${ext}

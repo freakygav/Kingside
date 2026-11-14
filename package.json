@@ -1,0 +1,41 @@
+{
+  "name": "kingside",
+  "productName": "Kingside",
+  "version": "1.0.0",
+  "description": "Kingside - play Stockfish at selectable strengths, then review your game.",
+  "author": "Kingside",
+  "license": "MIT",
+  "private": true,
+  "main": "out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "start": "electron-vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json && tsc --noEmit -p tsconfig.test.json",
+    "test": "vitest run",
+    "openings": "node scripts/build-openings.mjs",
+    "engine": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/fetch-stockfish.ps1",
+    "icons": "electron scripts/make-icons.cjs",
+    "selftest": "npm run build && node scripts/selftest.mjs",
+    "check-engine": "node scripts/check-engine.mjs",
+    "dist": "npm run check-engine && npm run build && electron-builder --win --x64",
+    "dist:dir": "npm run check-engine && npm run build && electron-builder --win --x64 --dir"
+  },
+  "dependencies": {
+    "chess.js": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "electron": "^45.3.2",
+    "electron-builder": "^26.18.0",
+    "electron-vite": "^6.0.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0"
+  }
+}

@@ -1,0 +1,10 @@
+node_modules/
+out/
+release/
+# Third-party engine binary is fetched by `npm run engine`, not committed.
+resources/engine/*
+!resources/engine/README.txt
+selftest-output/
+
+# One-off authoring helpers (not part of the build)
+scripts/_*.mjs
