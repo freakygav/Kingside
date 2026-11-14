@@ -218,7 +218,7 @@ To build the application yourself:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/USERNAME/REPOSITORY.git
+   git clone https://github.com/freakygav/REPOSITORY.git
    ```
 
 2. Navigate into the project directory:
